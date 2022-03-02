@@ -28,7 +28,9 @@ class SinglyLinkedList {
     }
 
     pop() {
-        // find the node before the last node
+        if (!this.head) return undefined;
+
+        // find the node before the last node (tail)
         let current = this.head;
         let removedNode = null;
         while (current.next.next) {
@@ -40,8 +42,17 @@ class SinglyLinkedList {
         current.next = null;
         this.length--;
         return removedNode;
+    }
 
+    shift() {
+        if (!this.tail) return undefined;
 
+        let current = this.head;
+        let removedNode = current;
+
+        this.head = current.next;
+        this.length--;
+        return removedNode;
     }
 
     printList() {
@@ -64,6 +75,6 @@ list.push("2")
 list.push("3")
 
 list.printList();
-console.log(list.pop());
+console.log(list.shift());
 list.printList();
 
