@@ -27,21 +27,28 @@ class SinglyLinkedList {
 
     }
 
+    // Remove item before the tail
     pop() {
         if (!this.head) return undefined;
 
-        // find the node before the last node (tail)
         let current = this.head;
-        let removedNode = null;
-        while (current.next.next) {
+        let newTail = current;
+        while (current.next) {
+            newTail = current;
             current = current.next;
         }
 
-        removedNode = current.next;
-        this.tail = current;
-        current.next = null;
+        this.tail = newTail;
+        this.tail.next = null;
         this.length--;
-        return removedNode;
+
+        if (this.length === 0) {
+            this.head = null;
+            this.tail = null;
+        }
+
+        return current;
+
     }
 
     shift() {
@@ -52,6 +59,9 @@ class SinglyLinkedList {
 
         this.head = current.next;
         this.length--;
+        if (this.length === 0) {
+            this.tail = null;
+        }
         return removedNode;
     }
 
@@ -71,10 +81,9 @@ class SinglyLinkedList {
 
 let list = new SinglyLinkedList()
 list.push("1")
-list.push("2")
-list.push("3")
+// list.push("2")
 
 list.printList();
-console.log(list.shift());
-list.printList();
+console.log(list.pop());
+console.log(list);
 
