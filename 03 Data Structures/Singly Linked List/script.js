@@ -66,7 +66,7 @@ class SinglyLinkedList {
     // adding a new node to the beginning of the list
     unshift(val) {
         let newNode = new Node(val);
-        if (!this.head){
+        if (!this.head) {
             this.head = newNode;
             this.tail = this.head;
         } else {
@@ -78,6 +78,18 @@ class SinglyLinkedList {
         return this;
     }
 
+    // Get - get a node at given index
+    get(n) {
+        if (n < 0 || n >= this.length) return null;
+
+        let current = this.head;
+        for (let i = 0; i < n; i++) {
+            current = current.next;
+        }
+        return current
+    }
+
+    // Print List
     printList() {
         if (!this.head) {
             console.log('EMPTY');
@@ -100,11 +112,8 @@ class SinglyLinkedList {
 
 let list = new SinglyLinkedList()
 list.push("aaa")
+list.push("bbb")
+list.push("ccc")
+list.push("ddd")
 
-list.printList();
-
-list.unshift('bbb');
-
-list.printList();
-
-console.log(list);
+console.log(list.get(0));
