@@ -12,6 +12,7 @@ class SinglyLinkedList {
         this.length = 0;
     }
 
+    // PUSH: add item to the end of the list
     push(val) {
         let newNode = new Node(val);
 
@@ -27,7 +28,7 @@ class SinglyLinkedList {
 
     }
 
-    // Remove item before the tail
+    // Removes an item before the tail
     pop() {
         if (!this.head) return undefined;
 
@@ -46,26 +47,42 @@ class SinglyLinkedList {
             this.head = null;
             this.tail = null;
         }
-
         return current;
-
     }
 
+    // Removes a node from the beginning of the list (after the head)
     shift() {
-        if (!this.tail) return undefined;
-
-        let current = this.head;
-        let removedNode = current;
-
-        this.head = current.next;
+        if (!this.head) return undefined;
+        let currentHead = this.head;
+        this.head = currentHead.next;
         this.length--;
+
         if (this.length === 0) {
             this.tail = null;
         }
-        return removedNode;
+        return currentHead;
+    }
+
+    // adding a new node to the beginning of the list
+    unshift(val) {
+        let newNode = new Node(val);
+        if (!this.head){
+            this.head = newNode;
+            this.tail = this.head;
+        } else {
+            newNode.next = this.head;
+            this.head = newNode;
+        }
+
+        this.length++;
+        return this;
     }
 
     printList() {
+        if (!this.head) {
+            console.log('EMPTY');
+            return;
+        }
         console.log("Printing List, length =", this.length);
         let current = this.head;
         while (current.next) {
@@ -76,14 +93,18 @@ class SinglyLinkedList {
 
     }
 
+
+
     // End of class 
 }
 
 let list = new SinglyLinkedList()
-list.push("1")
-// list.push("2")
+list.push("aaa")
 
 list.printList();
-console.log(list.pop());
-console.log(list);
 
+list.unshift('bbb');
+
+list.printList();
+
+console.log(list);
