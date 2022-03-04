@@ -3,6 +3,7 @@
 ## useful Functions
 ## Data Structures
 ### Linked List
+### Binary Search Tree
 
 
 ## Terms:
