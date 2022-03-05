@@ -1,3 +1,6 @@
+<p align="center">
+<img src="https://res.cloudinary.com/dojmo7vcc/image/upload/v1646490715/algo-cover_weay7n.png" width="400px" alt="@LycheeOrg"></p>
+
 # Algorithms
 ## Questions
 ## Useful Functions
