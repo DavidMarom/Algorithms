@@ -11,7 +11,7 @@ array.slice(1);
 arrB.includes(arrA[n])
 
 
-// ***************************************** split STR => ARR
+// ***************************************** split [ STR => ARR ]
 // mutates the variable itself OR only returns it if you assign it to a different variable
 str = "a, b, c";
 console.log(str.split(", "));
@@ -19,7 +19,7 @@ console.log(str.split(", "));
 // OUTPUT: [a,b,c]
 
 
-// ****************************************** join ARR => STR
+// ****************************************** join [ ARR => STR ]
 // mutates the variable itself OR only returns it if you assign it to a different variable
 finalStr = finalArr.join(',');
 
