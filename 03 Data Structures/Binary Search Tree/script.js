@@ -11,6 +11,7 @@ class BinarySerachTree {
         this.root = null;
     }
 
+    // INSERT
     insert(value) {
         let newNode = new Node(value);
         if (!this.root) {
@@ -40,6 +41,27 @@ class BinarySerachTree {
             }
         }
     }
+
+    // FIND
+    find(value) {
+        if (this.root === null) return false;
+        let current = this.root, found = false
+        while (current && !found) {
+            if (value < current.value) {
+                current = current.left;
+            } else if (value > current.value) {
+                current = current.right;
+            } else {
+                found = true;
+            }
+        } //while
+        if (!found) return undefined
+        return current;
+    }
+
+
+
+    // end of class
 }
 
 

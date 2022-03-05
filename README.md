@@ -1,9 +1,9 @@
 # Algorithms
 ## Questions
-## useful Functions
+## Useful Functions
 ## Data Structures
-### Linked List
-### Binary Search Tree
+- Linked List
+- Binary Search Tree
 
 
 ## Terms:
