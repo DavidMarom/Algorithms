@@ -23,3 +23,5 @@ console.log(str.split(", "));
 // mutates the variable itself OR only returns it if you assign it to a different variable
 finalStr = finalArr.join(',');
 
+// shift - take from the beginning
+// result = arr.shift();

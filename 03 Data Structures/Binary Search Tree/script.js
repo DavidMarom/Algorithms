@@ -59,10 +59,19 @@ class BinarySerachTree {
         return current;
     }
 
+    // BFS - Breadth First Search
+    BFD() {
+        let data = [], queue = [], node = this.root;
+        queue.push(this.root);
+
+        while (queue.length) {
+            node = queue.shift()
+            data.push(node);
+        }
+    }
 
 
-    // end of class
-}
+} // end of class
 
 
 let tree = new BinarySerachTree();
