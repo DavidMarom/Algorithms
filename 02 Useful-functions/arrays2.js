@@ -12,6 +12,16 @@ console.log('returned from array.slice(2)', arrB)
 
 console.log('==============================')
 
+
+// ************************* splice
+let arrC = [0, 1, 2, 3, 4, 5]
+console.log('splice: org: ', arrC);
+let removed = arrC.splice(2, 2, 'a', 'b')
+
+console.log('splice: new: ', arrC);
+console.log('splice: removed:',removed);
+
+
 // *********************** includes | Returns Boolean
 arrA = [1, 2, 'bannana', 4, 5]
 console.log('includes:', arrA.includes(2));
@@ -36,15 +46,6 @@ finalStr = arrC.join(',');
 console.log('after join:', finalStr)
 console.log('==============================')
 
-// ************************ shift - takes from the beginning
-
-arrD = [0, 1, 2, 3]
-console.log('ORIGINAL arrD', arrD)
-console.log('arrE = arrD.shift();')
-arrE = arrD.shift();
-
-console.log('arrE', arrE)
-console.log('arrD after shift', arrD)
 
 
 // push O(1)
@@ -52,8 +53,8 @@ console.log('arrD after shift', arrD)
 // unshift (N)
 // shift (N)
 
-// concat O(N)
 // slice O(N)
 // splice O(N)
+// concat O(N)
 // sort O9N * Log N)
 // forEach/mao/filter/reduce... O(N)
