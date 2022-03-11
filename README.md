@@ -14,7 +14,8 @@
 - Binary Search Tree
 
 ## Recursion
- - countDown
+- countDown, Power, Factorial, Fibonacci, Reverse String
+
 ## Terms:
  - Hash Table Review
  - Two Pointer Technique Review
