@@ -21,9 +21,23 @@ class Graph {
     removeVertex(v1) {
         while (this.adjacencyList[v1].length) {
             const adjacentVertex = this.adjacencyList[v1].pop();
-            this.removeEdge(v1,adjacentVertex);
+            this.removeEdge(v1, adjacentVertex);
         }
         delete this.adjacencyList[v1];
+    }
+
+    depthFirstRecursive(start) {
+        const result = [];
+        const visited = {};
+        const adjacencyList = this.adjacencyList;
+
+        (function dfs(vertex) {
+            if (!vertex) return null;
+            visted[vertex] = true;
+            result.push(vertex);
+            adjacencyList[vertex]
+        })(start)
+
     }
 }
 let g = new Graph();
