@@ -14,6 +14,7 @@ A reference implementation of core computer science concepts in **JavaScript** -
   - [Binary Search Tree](#binary-search-tree)
   - [Graph](#graph)
 - [Recursion](#recursion)
+- [Advanced Algorithms](#advanced-algorithms)
 - [Algorithm Challenges](#algorithm-challenges)
 - [Utility Reference](#utility-reference)
 
@@ -77,6 +78,26 @@ Undirected graph using an **adjacency list** representation.
 | `recursiveRange(n)` | Sum all integers from 0 to n |
 | `fib(n)` | Return the nth Fibonacci number |
 | `reverse(str)` | Reverse a string |
+
+---
+
+## Advanced Algorithms
+`05 Advanced/script.js`
+
+### Dijkstra's Shortest Path
+Finds the shortest path between two vertices in a weighted graph using a min-heap priority queue.
+
+**Time:** O((V + E) log V) — **Space:** O(V)
+
+| Class / Function | Description |
+|---|---|
+| `WeightedGraph` | Undirected weighted graph (adjacency list) |
+| `addVertex(v)` | Add a vertex |
+| `addEdge(v1, v2, weight)` | Add a weighted undirected edge |
+| `dijkstra(start, end)` | Returns `{ distance, path }` for the shortest route |
+| `PriorityQueue` | Internal min-heap used to always expand the cheapest vertex next |
+
+**Demo graph (A → E):** path `A → C → D → F → E`, total weight `6`
 
 ---
 
