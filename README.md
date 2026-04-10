@@ -3,7 +3,7 @@
 
 # Algorithms & Data Structures
 
-A reference implementation of core computer science concepts in **JavaScript** — covering data structures, recursion patterns, algorithm challenges, and built-in method complexity analysis.
+A reference implementation of core computer science concepts in **JavaScript** - covering data structures, recursion patterns, algorithm challenges, and built-in method complexity analysis.
 
 ---
 
@@ -85,7 +85,7 @@ Undirected graph using an **adjacency list** representation.
 
 | Problem | Description | Approach |
 |---|---|---|
-| `FindIntersection` | Given two sorted comma-separated number strings, return their common elements | Filter + linear scan — O(n·m) |
+| `FindIntersection` | Given two sorted comma-separated number strings, return their common elements | Filter + linear scan - O(n·m) |
 
 ---
 
@@ -115,4 +115,4 @@ Undirected graph using an **adjacency list** representation.
 
 ## Language
 
-JavaScript (ES6+) — no dependencies, runs in any modern browser or Node.js environment.
+JavaScript (ES6+) - no dependencies, runs in any modern browser or Node.js environment.
