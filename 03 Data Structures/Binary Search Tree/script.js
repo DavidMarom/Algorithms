@@ -7,7 +7,7 @@ class Node {
     }
 }
 
-class BinarySerachTree {
+class BinarySearchTree {
     constructor() {
         this.root = null;
     }
@@ -61,7 +61,7 @@ class BinarySerachTree {
     }
 
     // BFS - Breadth First Search
-    BFD() {
+    BFS() {
         let data = [], queue = [], node = this.root;
         queue.push(this.root);
 
@@ -76,7 +76,7 @@ class BinarySerachTree {
 } // end of class
 
 
-let tree = new BinarySerachTree();
+let tree = new BinarySearchTree();
 tree.insert(10);
 tree.insert(15);
 tree.insert(20);
@@ -84,4 +84,4 @@ tree.insert(5);
 tree.insert(3);
 tree.insert(8);
 
-console.log(tree.BFD());
+console.log(tree.BFS());
