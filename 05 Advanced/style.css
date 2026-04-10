@@ -3,3 +3,58 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #dddddd;
 }
+
+/* ── Chat ─────────────────────────────────────────────────────────────────── */
+#chat-log {
+    background-color: #333333;
+    border: 1px solid #666666;
+    border-radius: 4px;
+    padding: 10px;
+    max-height: 320px;
+    overflow-y: auto;
+    margin-bottom: 8px;
+}
+
+.chat-message {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+.chat-user  { color: #88ccff; }
+.chat-agent { color: #aaffaa; }
+
+#chat-controls {
+    display: flex;
+    gap: 8px;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 6px 10px;
+    background-color: #555555;
+    color: #dddddd;
+    border: 1px solid #777777;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+#send-btn {
+    padding: 6px 16px;
+    background-color: #666666;
+    color: #dddddd;
+    border: 1px solid #888888;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#send-btn:hover { background-color: #777777; }
+
+#chat-status {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: #aaaaaa;
+    min-height: 16px;
+}
